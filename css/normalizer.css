@@ -1,0 +1,89 @@
+/*
+  Modern CSS Reset / Normalize
+  Based on Andy Bell's reset + additional improvements
+*/
+
+/* 1. Используем более предсказуемую модель боксов */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* 3. Убираем маркированные списки по умолчанию */
+ul,
+ol {
+  list-style: none;
+}
+
+/* 4. Упрощаем работу с изображениями и медиа */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 5. Наследуем шрифты для форм */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  letter-spacing: inherit;
+  word-spacing: inherit;
+}
+
+/* 6. Убираем стандартные стили кнопок, но оставляем курсор */
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* 7. Убираем обводку у фокуса, но добавляем кастомную (доступность) */
+:focus-visible {
+  outline: 3px solid #4a9eff;
+  outline-offset: 2px;
+}
+
+/* 8. Убираем подчёркивание у ссылок по умолчанию, если не ховер */
+a[class] {
+  text-decoration: none;
+}
+
+a {
+  color: inherit;
+}
+
+/* 9. Таблицы — только для данных, без границ-отступов-по умолчанию */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+
+/* 10. Убираем стрелки в number input */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+/* 11. Стандартные заголовки наследуют вес и размер (без агрессивных сбросов) */
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/* 12. Горизонтальные линии (hr) — тонкие и серые */
+hr {
+  border: none;
+  border-top: 1px solid #e2e8f0;
+  margin: 1rem 0;
+}
