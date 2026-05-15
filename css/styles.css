@@ -27,6 +27,12 @@
     --header-top-height: 76px;
     --header-bottom-height-link: 33px;
 
+    --button-height: 60px;
+    --button-height-lg: 70px;
+
+    --button-padding-x: 22px;
+    --button-padding-x-lg: 74px;
+
     --transition-duration: .25s;
 }
 
@@ -42,6 +48,15 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+a,
+button,
+input,
+textarea,
+label,
+svg * {
+    transition-duration: var(--transition-duration);
+}
+
 .container {
     max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
     margin-inline: auto;
@@ -49,7 +64,19 @@ body {
 }
 
 .btn, 
-.button {}
+.button {
+    display: inline-flex;
+    align-items: center;
+    background-color: var(--color-accent);
+    color: var(--color-light);
+    font-size: clamp(10px, 0.83vw, 16px);
+    font-weight: 500;
+    line-height: 1;
+    text-transform: uppercase;
+    padding: clamp(16px, 1.3vw, 25px) var(--button-padding-x);
+
+
+}
 
 
 /* HEADER */
@@ -155,10 +182,49 @@ body {
 }
 /* HEADER END*/
 
+/* BANNER */
+.banner {
+    min-height: 750px;
+    background: var(--color-grey) url(../img/banner-1.jpg) center bottom/cover no-repeat;
+    color: var(--color-light);
+}
+
+.banner__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    padding-block: 60px;
+}
+
+.banner__heding {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 38.72%, rgba(0, 0, 0, 0.5) 61.63%, rgba(0, 0, 0, 0) 100%);
+    backdrop-filter: blur(5.3px);
+    padding: 17px clamp(20px, 6.46vw, 124px);
+}
+
+.banner__heding h1 {
+    font-size: clamp(20px, 2.08vw, 40px);
+    font-weight: 500;
+    line-height: 1.38;
+    text-align: center;
+}
+
+.banner__heding h1 span {
+    color: var(--color-accent);
+    display: block;
+}
+
+/* BANNER END */
+
 /* MEDIA */
 @media (any-hover: hover) {
     .header__menu--link:hover::after {
         width: 100%;
+    }
+    .btn:hover, 
+    .button:hover {
+        opacity: 0.9;
     }
 }
 
@@ -171,6 +237,10 @@ body {
 @media (max-width: 1024px) {
     :root {
         --burger-button-width: 40px;
+    }
+
+    .header__top {
+        border-bottom: none;
     }
 
     .header__bottom {
