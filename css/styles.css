@@ -16,7 +16,7 @@
 :root {
     --color-light: #ffffff;
     --color-dark: #000000;
-    --color-grey: #f2f3f3;
+    --color-grey: #f3f3f3;
     --color-accent: #00CABF;
 
     --default-font: Haval, sans-serif;
@@ -63,8 +63,7 @@ svg * {
     padding-inline: var(--container-padding-x);
 }
 
-.btn, 
-.button {
+.btn {
     display: inline-flex;
     align-items: center;
     background-color: var(--color-accent);
@@ -73,9 +72,17 @@ svg * {
     font-weight: 500;
     line-height: 1;
     text-transform: uppercase;
-    padding: clamp(16px, 1.3vw, 25px) var(--button-padding-x);
+    height: var(--button-height);
+    padding-inline: var(--button-padding-x);
+}
 
+.btn-lg {
+    height: var(--button-height-lg);
+    padding-inline: var(--button-padding-x-lg);
+}
 
+section {
+    padding-block: 60px;
 }
 
 
@@ -184,7 +191,7 @@ svg * {
 
 /* BANNER */
 .banner {
-    min-height: 750px;
+    min-height: calc(100dvh - (var(--header-top-height) + var(--header-bottom-height-link)));
     background: var(--color-grey) url(../img/banner-1.jpg) center bottom/cover no-repeat;
     color: var(--color-light);
 }
@@ -214,8 +221,34 @@ svg * {
     color: var(--color-accent);
     display: block;
 }
-
 /* BANNER END */
+
+/* FIXATION */
+
+.fixation {
+    background-color: var(--color-grey);
+    padding-top: 35px;
+    padding-bottom: 18px;
+}
+
+.fixation__wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.fixation h2 {
+    font-size: 16px;
+    line-height: 19px;
+    margin-bottom: 10px;
+}
+
+.fixation__action {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+/* FIXATION END */
 
 /* MEDIA */
 @media (any-hover: hover) {
@@ -237,6 +270,10 @@ svg * {
 @media (max-width: 1024px) {
     :root {
         --burger-button-width: 40px;
+        --button-height: 50px;
+        --button-height-lg: 50px;
+        --button-padding-x-lg: 40px;
+             
     }
 
     .header__top {
@@ -348,9 +385,34 @@ svg * {
         display: flex;
         padding-top: 20px;
     }
+
+    .banner {
+        min-height: calc(100dvh - var(--header-top-height));
+    }
+
+    .fixation__wrapper {
+        grid-template-columns: 1fr;
+        gap: 2.93vw;
+    }
+
+    .fixation h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .fixation__action {
+        justify-content: center;
+    }
 }
 
 @media (max-width: 768px) {
+    :root {
+        --button-height: 42px;
+        --button-padding-x-lg: 25px;     
+    }
+    .header__top--wrapper {
+        gap: 10px;
+    }
     .header__phone span {
         display: none;
     }

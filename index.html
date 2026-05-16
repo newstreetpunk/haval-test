@@ -6,8 +6,10 @@
     <title>Test Task | HAVAL</title>
 
     <link rel="stylesheet" href="css/normalizer.css">
+    <link rel="stylesheet" href="libs/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/styles.css">
 
+    <script src="libs/swiper/swiper-bundle.min.js" defer></script>
     <script src="js/app.js" defer></script>
 
 </head>
@@ -95,6 +97,59 @@
             </div>
         </div>
     </div>
+
+    <main>
+
+        <section class="fixation" id="fixation">
+            <div class="fixation__wrapper container">
+
+                <div class="fixation__timer">
+                    <h2>Оставьте заявку и зафиксируйте условия</h2>
+
+                    <div class="fixation__timer">
+                        <!-- Sinoby Timer -->
+                        <style>
+                            /* Фиксирует высоту таймера до загрузки */
+                            .sinoby-timer[data-sinoby-reserve="sinoby-8ex6tp"]{display:block;min-height:114px;}
+                            @media (max-width:767px){.sinoby-timer[data-sinoby-reserve="sinoby-8ex6tp"]{min-height:83px;}}
+                        </style>
+                        <div class="sinoby-timer"
+                            data-sinoby-reserve="sinoby-8ex6tp"
+                            data-config='{
+                                "type": "cyclic",
+                                "preset": "rings-soft",
+                                "schedule": {
+                                    "cyclePreset": "weekly"
+                                },
+                                "style": {
+                                    "digitsFont": "Inter, sans-serif",
+                                    "digitGap": 8,
+                                    "digitColor": "#000000",
+                                    "labelsFont": "Inter, sans-serif",
+                                    "labelSize": 18,
+                                    "labelGap": 0,
+                                    "labelColor": "#b9b9b9",
+                                    "cardBackgroundColor": "#f8fafc",
+                                    "ringCurrentColor": "#00cabf",
+                                    "ringRemainingColor": "#d6d6d6"
+                                }
+                            }'
+                            data-lazy="true"
+                        ></div>
+                        <script src="//timer.sinoby.ru/public/assets/embed/timer-core.min.js?v=20260514a"></script>
+                        <!-- /Sinoby Timer -->
+                    </div>
+
+                </div>
+                
+                <div class="fixation__action">
+                    <a href="#" class="btn btn-lg">Зафиксировать условия</a>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
 
 </body>
 </html>
