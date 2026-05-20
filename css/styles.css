@@ -81,6 +81,29 @@ svg * {
     padding-inline: var(--button-padding-x-lg);
 }
 
+.icon {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 8px;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 14px;
+    transition-duration: var(--transition-duration);
+}
+
+.icon__wrapper {
+    width: 28px;
+    aspect-ratio: 1;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background-color: var(--color-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition-duration: var(--transition-duration);
+}
+
 .sr-only {
     clip-path: inset(50%);
     white-space: nowrap;
@@ -204,7 +227,7 @@ section {
 /* BANNER */
 .banner {
     min-height: calc(100dvh - (var(--header-top-height) + var(--header-bottom-height-link)));
-    background: var(--color-grey) url(../img/banner-1.jpg) center bottom/cover no-repeat;
+    background: var(--color-dark) url(../img/banner-1.jpg) center bottom/cover no-repeat;
     color: var(--color-light);
 }
 
@@ -262,15 +285,163 @@ section {
 
 /* FIXATION END */
 
+/* MODELS */
+
+.model__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.model__item {
+    --model-item-padding: 40px;
+
+    position: relative;
+    padding: var(--model-item-padding);
+    background-color: var(--color-grey);    
+}
+
+.model__item--badge {
+    --badge-height: 42px;
+
+    background-color: var(--color-accent);
+    color: var(--color-light);
+    position: absolute;
+    height: var(--badge-height);
+    top: calc(var(--badge-height) / -2);
+    right: var(--model-item-padding);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 12px;
+    line-height: 1.1;
+    text-align: center;
+    text-transform: uppercase;
+    padding-inline: 20px;
+    
+}
+
+.model__item--badge span {
+    display: block;
+    color: var(--color-dark);
+}
+
+.model__item--header {
+    --itemHeaderPadding: 24px;
+    --itemHeaderPaddingRight: 153px;
+    position: relative;
+    padding: var(--itemHeaderPadding) var(--itemHeaderPadding) 0;
+    height: 356px;
+    background: var(--color-light) url(../img/model-header-bg.png) center bottom/contain no-repeat;
+    display: block;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.model__item--header h3 {
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 1.39;
+    margin-bottom: 20px;
+    padding-right: calc(var(--itemHeaderPaddingRight) + 5px);
+}
+
+.model__item--info {
+    flex-grow: 1;
+    flex-shrink: 0;
+}
+
+.model__item--info__benefit {
+    width: 100%;
+    font-size: 20px;
+    line-height: 23px;
+}
+
+.model__item--info__benefit span {
+    color: var(--color-accent);
+}
+
+.model__item--test-drive {
+    width: var(--itemHeaderPaddingRight);
+    position: absolute;
+    top: var(--itemHeaderPadding);
+    right: var(--itemHeaderPadding);
+}
+
+.model__item--test-drive:hover {
+    text-decoration: underline;
+}
+
+.model__item--test-drive .icon__wrapper {
+    background-color: var(--color-accent);
+}
+
+.model__item--body__colors {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin: 32px 0 27px;
+}
+
+.color-link {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.color-link::before {
+    content: '';
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+}
+
+.color-link::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 50px;
+    /* background-color: var(--color-light); */
+    box-shadow: 0px 0px 0px 3px #FFFFFF, 0px 0px 5px 2px #000000;
+    z-index: -1;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.color-link.is-active::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+.color-link[data-color="black"]::before{
+    background-color: #000000;
+}
+.color-link[data-color="white"]::before{
+    background-color: #E7E7E7;
+}
+.color-link[data-color="gray"]::before{
+    background-color: #A1A1A1;
+}
+
+/* MODELS END */
+
 /* MEDIA */
 @media (any-hover: hover) {
     .header__menu--link:hover::after {
         width: 100%;
     }
+
     .btn:hover, 
     .button:hover {
         opacity: 0.9;
     }
+
+    .icon:hover .icon__wrapper {
+        background-color: var(--color-accent);
+    }       
 }
 
 @media (max-width: 1280px) {
