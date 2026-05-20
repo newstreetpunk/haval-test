@@ -375,6 +375,11 @@ section {
     background-color: var(--color-accent);
 }
 
+.model__item--image img {
+    width: 100%;
+    height: auto;
+}
+
 .model__item--body__colors {
     display: flex;
     justify-content: center;
