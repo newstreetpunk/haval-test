@@ -54,4 +54,68 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // MODALS
+
+    const popupLinks = document.querySelectorAll(".popup-link");
+    const modalOverlays = document.querySelectorAll(".modal-overlay");
+
+    if( popupLinks.length ) {
+
+        popupLinks.forEach(link => {
+            link.onclick = (e) => {
+                e.preventDefault();
+
+                let id = link.getAttribute("href") || link.dataset.target;
+                if (id === "#" || !id) return;
+
+                const targetModal = document.getElementById(id.replace("#", ""));
+                if (!targetModal) return;
+
+                const formTitle = targetModal.querySelector(".modal-title");
+                if (formTitle) {
+                    formTitle.innerHTML = link.dataset.title || 'Обратная связь';
+                }
+                const formSubtitle = targetModal.querySelector(".modal-subtitle");
+                if (formSubtitle) {
+                    formSubtitle.innerHTML = link.dataset.subtitle || 'Оставьте свои данные и мы свяжемся с Вами в ближайшее время!';
+                }
+                const formName = link.dataset.form_name;
+                const formInput = targetModal.querySelector('input[name="form"]');
+                if (formName && formInput) {
+                    formInput.value = formName;
+                }
+                
+                targetModal.removeAttribute("hidden");
+                document.body.classList.add("overflow-hidden");
+            }
+        });
+
+    }
+
+    if( modalOverlays.length ) {
+        modalOverlays.forEach((el) => {
+            document.addEventListener("keydown", (event) => {
+                if (event.key == "Escape") {
+                    closeModal(el);
+                }
+            });
+
+            el.addEventListener("click", (event) => {
+                if (typeof event.target.dataset.close != "undefined") {
+                    closeModal(el);
+                }
+            });
+        });
+    }
+
+    function closeModal(modal) {
+        const form = modal.querySelector("form");
+        if (form) {
+            form.reset();
+        }
+        modal.setAttribute("hidden", "");
+        document.body.classList.remove("overflow-hidden");
+    }
+
+
 });

@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Test Task | HAVAL</title>
 
     <link rel="stylesheet" href="css/normalizer.css">
-    <link rel="stylesheet" href="libs/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/styles.css">
 
-    <script src="libs/swiper/swiper-bundle.min.js" defer></script>
     <script src="js/app.js" defer></script>
 
 </head>
+
 <body>
-    
+
     <header class="header">
 
         <div class="header__top">
@@ -54,21 +54,33 @@
                 <nav class="header__menu">
 
                     <ul class="header__menu--list model-list-menu">
-                        <li class="header__menu--item"><a href="javascript:void(0)" class="header__menu--link">M6</a></li>
-                        <li class="header__menu--item"><a href="javascript:void(0)" class="header__menu--link">DARGO X</a></li>
-                        <li class="header__menu--item"><a href="javascript:void(0)" class="header__menu--link">DARGO</a></li>
-                        <li class="header__menu--item"><a href="javascript:void(0)" class="header__menu--link">JOLION</a></li>
-                        <li class="header__menu--item"><a href="javascript:void(0)" class="header__menu--link">F7x</a></li>
-                        <li class="header__menu--item"><a href="javascript:void(0)" class="header__menu--link">F7</a></li>
-                        <li class="header__menu--item"><a href="javascript:void(0)" class="header__menu--link">H9</a></li>
-                        <li class="header__menu--item"><a href="javascript:void(0)" class="header__menu--link">GWM Poer</a></li>
-                        <li class="header__menu--item"><a href="javascript:void(0)" class="header__menu--link">GWM Poer KINGKONG</a></li>
+                        <li class="header__menu--item"><a href="#m6" class="header__menu--link">M6</a>
+                        </li>
+                        <li class="header__menu--item"><a href="#dargo-x" class="header__menu--link">DARGO
+                                X</a></li>
+                        <li class="header__menu--item"><a href="javascript:void(0)" class="header__menu--link">DARGO</a>
+                        </li>
+                        <li class="header__menu--item"><a href="javascript:void(0)"
+                                class="header__menu--link">JOLION</a></li>
+                        <li class="header__menu--item"><a href="javascript:void(0)" class="header__menu--link">F7x</a>
+                        </li>
+                        <li class="header__menu--item"><a href="javascript:void(0)" class="header__menu--link">F7</a>
+                        </li>
+                        <li class="header__menu--item"><a href="javascript:void(0)" class="header__menu--link">H9</a>
+                        </li>
+                        <li class="header__menu--item"><a href="javascript:void(0)" class="header__menu--link">GWM
+                                Poer</a></li>
+                        <li class="header__menu--item"><a href="javascript:void(0)" class="header__menu--link">GWM Poer
+                                KINGKONG</a></li>
                     </ul>
 
                     <ul class="header__menu--list info-list-menu">
-                        <li class="header__menu--item"><a href="javascript:void(0)" class="header__menu--link">Подобрать комплектацию</a></li>
-                        <li class="header__menu--item"><a href="javascript:void(0)" class="header__menu--link">Тест-драйв</a></li>
-                        <li class="header__menu--item"><a href="javascript:void(0)" class="header__menu--link">Контакты</a></li>
+                        <li class="header__menu--item"><a href="javascript:void(0)" class="header__menu--link">Подобрать
+                                комплектацию</a></li>
+                        <li class="header__menu--item"><a href="javascript:void(0)"
+                                class="header__menu--link">Тест-драйв</a></li>
+                        <li class="header__menu--item"><a href="javascript:void(0)"
+                                class="header__menu--link">Контакты</a></li>
                     </ul>
 
                 </nav>
@@ -93,7 +105,7 @@
                 <div class="banner__heding">
                     <h1>Увеличиваем выгоды на HAVAL <span>в Химках к Чёрной пятнице!</span></h1>
                 </div>
-                <a href="#" class="btn popup-link">Зафиксировать условия</a>
+                <a href="#common-modal" class="btn popup-link" data-title="Зафиксировать условия" data-form_name="Зафиксировать условия. Баннер">Зафиксировать условия</a>
             </div>
         </div>
     </div>
@@ -110,12 +122,18 @@
                         <!-- Sinoby Timer -->
                         <style>
                             /* Фиксирует высоту таймера до загрузки */
-                            .sinoby-timer[data-sinoby-reserve="sinoby-8ex6tp"]{display:block;min-height:114px;}
-                            @media (max-width:767px){.sinoby-timer[data-sinoby-reserve="sinoby-8ex6tp"]{min-height:83px;}}
+                            .sinoby-timer[data-sinoby-reserve="sinoby-8ex6tp"] {
+                                display: block;
+                                min-height: 114px;
+                            }
+
+                            @media (max-width:767px) {
+                                .sinoby-timer[data-sinoby-reserve="sinoby-8ex6tp"] {
+                                    min-height: 83px;
+                                }
+                            }
                         </style>
-                        <div class="sinoby-timer"
-                            data-sinoby-reserve="sinoby-8ex6tp"
-                            data-config='{
+                        <div class="sinoby-timer" data-sinoby-reserve="sinoby-8ex6tp" data-config='{
                                 "type": "cyclic",
                                 "preset": "rings-soft",
                                 "schedule": {
@@ -133,9 +151,7 @@
                                     "ringCurrentColor": "#00cabf",
                                     "ringRemainingColor": "#d6d6d6"
                                 }
-                            }'
-                            data-lazy="true"
-                        ></div>
+                            }' data-lazy="true"></div>
                         <script src="//timer.sinoby.ru/public/assets/embed/timer-core.min.js?v=20260514a"></script>
                         <!-- /Sinoby Timer -->
                     </div>
@@ -143,7 +159,7 @@
                 </div>
 
                 <div class="fixation__action">
-                    <a href="#" class="btn btn-lg popup-link">Зафиксировать условия</a>
+                    <a href="#common-modal" class="btn btn-lg popup-link" data-title="Зафиксировать условия" data-form_name="Зафиксировать условия. Таймер">Зафиксировать условия</a>
                 </div>
 
             </div>
@@ -155,15 +171,16 @@
 
             <div class="model__list container">
 
-                <div class="model__item">
+                <div class="model__item" id="m6">
 
                     <div class="model__item--badge">В наличии <span>21 автомобиль</span></div>
 
                     <a href="/" class="model__item--header">
                         <div class="model__item--info">
                             <h3>HAVAL M6</h3>
-                            <div class="model__item--info__benefit">Выгода до&nbsp;<span>410&nbsp;000&nbsp;₽</span></div>
-                            <div class="model__item--test-drive popup-link icon">
+                            <div class="model__item--info__benefit">Выгода до&nbsp;<span>410&nbsp;000&nbsp;₽</span>
+                            </div>
+                            <div class="model__item--test-drive popup-link icon" data-target="common-modal" data-title="Записаться на тест-драйв. HAVAL&nbsp;M6" data-form_name="Запись на тест-драйв. HAVAL M6">
                                 <div class="icon__wrapper">
                                     <img src="icons/pen.svg" alt="">
                                 </div>
@@ -179,9 +196,12 @@
                     <div class="model__item--body">
 
                         <div class="model__item--body__colors">
-                            <button class="color-link is-active" data-color="black" data-car-image="img/models/m6/black.png" title="Черный"></button>
-                            <button class="color-link" data-color="white" data-car-image="img/models/m6/white.png" title="Белый"></button>
-                            <button class="color-link" data-color="gray" data-car-image="img/models/m6/gray.png" title="Серый"></button>
+                            <button class="color-link is-active" data-color="black"
+                                data-car-image="img/models/m6/black.png" title="Черный"></button>
+                            <button class="color-link" data-color="white" data-car-image="img/models/m6/white.png"
+                                title="Белый"></button>
+                            <button class="color-link" data-color="gray" data-car-image="img/models/m6/gray.png"
+                                title="Серый"></button>
                         </div>
 
                         <div class="model__item--gifts">
@@ -221,24 +241,25 @@
 
                     <div class="model__item--footer">
 
-                        <a href="#" class="popup-link btn btn-sm">Узнать стоимость</a>
-                        <a href="#" class="popup-link btn btn-sm btn-black">Рассчитать кредит</a>
-                        <a href="#" class="popup-link btn btn-sm btn-o">Подобрать комплектацию</a>
+                        <a href="#common-modal" class="popup-link btn btn-sm" data-title="Узнать стоимость. HAVAL&nbsp;M6" data-form_name="Узнать стоимость. HAVAL M6">Узнать стоимость</a>
+                        <a href="#common-modal" class="popup-link btn btn-sm btn-black" data-title="Рассчитать кредит. HAVAL&nbsp;M6" data-form_name="Рассчитать кредит. HAVAL M6">Рассчитать кредит</a>
+                        <a href="#common-modal" class="popup-link btn btn-sm btn-o" data-title="Подобрать комплектацию. HAVAL&nbsp;M6" data-form_name="Подобрать комплектацию. HAVAL M6">Подобрать комплектацию</a>
 
                     </div>
 
                 </div>
                 <!-- ./model__item -->
 
-                <div class="model__item">
+                <div class="model__item" id="dargo-x">
 
                     <div class="model__item--badge">В наличии</div>
 
                     <a href="/" class="model__item--header">
                         <div class="model__item--info">
                             <h3>HAVAL DARGO X</h3>
-                            <div class="model__item--info__benefit">Выгода до&nbsp;<span>320&nbsp;000&nbsp;₽</span></div>
-                            <div class="model__item--test-drive popup-link icon">
+                            <div class="model__item--info__benefit">Выгода до&nbsp;<span>320&nbsp;000&nbsp;₽</span>
+                            </div>
+                            <div class="model__item--test-drive popup-link icon" data-target="common-modal" data-title="Записаться на тест-драйв. HAVAL&nbsp;DARGO&nbsp;X" data-form_name="Запись на тест-драйв. HAVAL DARGO">
                                 <div class="icon__wrapper">
                                     <img src="icons/pen.svg" alt="">
                                 </div>
@@ -254,10 +275,15 @@
                     <div class="model__item--body">
 
                         <div class="model__item--body__colors">
-                            <button class="color-link is-active" data-color="agate" data-car-image="img/models/dargo-x/agate.png" title="Агат"></button>
-                            <button class="color-link" data-color="black-jade" data-car-image="img/models/dargo-x/black-jade.png" title="Черный-нефрит"></button>
-                            <button class="color-link" data-color="graphite-quartz" data-car-image="img/models/dargo-x/graphite-quartz.png" title="Графитовый-кварц"></button>
-                            <button class="color-link" data-color="terracotta" data-car-image="img/models/dargo-x/terracotta.png" title="Терракотовый"></button>
+                            <button class="color-link is-active" data-color="agate"
+                                data-car-image="img/models/dargo-x/agate.png" title="Агат"></button>
+                            <button class="color-link" data-color="black-jade"
+                                data-car-image="img/models/dargo-x/black-jade.png" title="Черный-нефрит"></button>
+                            <button class="color-link" data-color="graphite-quartz"
+                                data-car-image="img/models/dargo-x/graphite-quartz.png"
+                                title="Графитовый-кварц"></button>
+                            <button class="color-link" data-color="terracotta"
+                                data-car-image="img/models/dargo-x/terracotta.png" title="Терракотовый"></button>
                         </div>
 
                         <div class="model__item--gifts">
@@ -297,9 +323,9 @@
 
                     <div class="model__item--footer">
 
-                        <a href="#" class="popup-link btn btn-sm">Узнать стоимость</a>
-                        <a href="#" class="popup-link btn btn-sm btn-black">Рассчитать кредит</a>
-                        <a href="#" class="popup-link btn btn-sm btn-o">Подобрать комплектацию</a>
+                        <a href="#common-modal" class="popup-link btn btn-sm" data-title="Узнать стоимость. HAVAL&nbsp;DARGO&nbsp;X" data-form_name="Узнать стоимость. HAVAL DARGO X">Узнать стоимость</a>
+                        <a href="#common-modal" class="popup-link btn btn-sm btn-black" data-title="Рассчитать кредит. HAVAL&nbsp;DARGO&nbsp;X" data-form_name="Рассчитать кредит. HAVAL DARGO X">Рассчитать кредит</a>
+                        <a href="#common-modal" class="popup-link btn btn-sm btn-o" data-title="Подобрать комплектацию. HAVAL&nbsp;DARGO&nbsp;X" data-form_name="Подобрать комплектацию. HAVAL DARGO X">Подобрать комплектацию</a>
 
                     </div>
 
@@ -312,5 +338,43 @@
 
     </main>
 
+    <div class="modal-overlay" id="common-modal" data-close hidden>
+
+        <div class="modal-content">
+
+            <div class="modal-close-btn" data-close>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" data-close class="custom-stroke-black">
+                    <line y1="9.5" x2="20" y2="9.5" stroke="" data-close></line>
+                    <line x1="9.5" y1="20" x2="9.5" stroke="" data-close></line>
+                </svg>
+            </div>
+
+            <p class="modal-title">Заказать звонок</p>
+
+            <p class="modal-subtitle">Оставьте свои данные и мы свяжемся с Вами в ближайшее время!</p>
+
+            <form action="/">
+
+                <input type="hidden" name="form" value="Заказ звонка. Шапка">
+
+                <input type="tel" name="phone" placeholder="+7 (999) 999-99-99*" required>
+                
+                <label class="custom-checkbox"> 
+                    <input type="checkbox" name="agree" class="sr-only" required>
+                    <span class="fake-checkbox"></span>
+                    <div>
+                        <span>Даю согласие на обработку своих персональных данных на условиях, указанных</span> <a href="/privacy-policy/" class="m-0! underline transition-all hover:no-underline" target="_blank">здесь</a> и на использование cookie на условиях, указанных <a href="/cookie-policy/" class="m-0! underline transition-all hover:no-underline" target="_blank">здесь</a>
+                    </div>                    
+                </label> 
+                
+                <button type="submit" class="btn w-full">Отправить</button>
+
+            </form>
+
+        </div>
+
+    </div>
+
 </body>
+
 </html>
