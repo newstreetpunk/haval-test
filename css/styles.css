@@ -66,6 +66,7 @@ svg * {
 .btn {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     background-color: var(--color-accent);
     color: var(--color-light);
     font-size: clamp(10px, 0.83vw, 16px);
@@ -74,11 +75,26 @@ svg * {
     text-transform: uppercase;
     height: var(--button-height);
     padding-inline: var(--button-padding-x);
+    text-align: center;
 }
 
 .btn-lg {
     height: var(--button-height-lg);
     padding-inline: var(--button-padding-x-lg);
+}
+
+.btn-sm {
+    font-size: clamp(10px, 0.7vw, 13.56px);
+}
+
+.btn-black {
+    background-color: var(--color-dark);
+}
+
+.btn-o {
+    background-color: transparent;
+    border: 1px solid var(--color-dark);
+    color: var(--color-dark);
 }
 
 .icon {
@@ -331,7 +347,7 @@ section {
     --itemHeaderPaddingRight: 153px;
     position: relative;
     padding: var(--itemHeaderPadding) var(--itemHeaderPadding) 0;
-    height: 356px;
+    aspect-ratio: 480 / 356;
     background: var(--color-light) url(../img/model-header-bg.png) center bottom/contain no-repeat;
     display: block;
     border: 1px solid rgba(0, 0, 0, 0.2);
@@ -343,11 +359,6 @@ section {
     line-height: 1.39;
     margin-bottom: 20px;
     padding-right: calc(var(--itemHeaderPaddingRight) + 5px);
-}
-
-.model__item--info {
-    flex-grow: 1;
-    flex-shrink: 0;
 }
 
 .model__item--info__benefit {
@@ -389,6 +400,19 @@ section {
     margin: 32px 0 27px;
 }
 
+.model__item--gifts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 5px;
+    row-gap: 13px;
+}
+
+.model__item--footer {
+    display: grid;
+    gap: 10px;
+    margin-top: 32px;
+}
+
 .color-link {
     position: relative;
     z-index: 1;
@@ -421,14 +445,22 @@ section {
     visibility: visible;
 }
 
-.color-link[data-color="black"]::before{
+.color-link[data-color="black"]::before,
+.color-link[data-color="black-jade"]::before{
     background-color: #000000;
 }
 .color-link[data-color="white"]::before{
     background-color: #E7E7E7;
 }
-.color-link[data-color="gray"]::before{
+.color-link[data-color="gray"]::before,
+.color-link[data-color="agate"]::before{
     background-color: #A1A1A1;
+}
+.color-link[data-color="graphite-quartz"]::before{
+    background-color: #202122;
+}
+.color-link[data-color="terracotta"]::before{
+    background-color: #A13A21;
 }
 
 /* MODELS END */
@@ -442,6 +474,11 @@ section {
     .btn:hover, 
     .button:hover {
         opacity: 0.9;
+    }
+
+    .btn-o:hover {
+        background-color: var(--color-dark);
+        color: var(--color-light);
     }
 
     .icon:hover .icon__wrapper {
@@ -591,6 +628,38 @@ section {
     .fixation__action {
         justify-content: center;
     }
+
+    .icon,
+    .model__item--badge {
+        font-size: 10px;
+    }
+
+    .model__item {
+        --model-item-padding: 30px;
+    }
+
+    .model__item--info {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .model__item--header h3 {
+        font-size: 20px;
+        margin-bottom: 0;
+        padding-right: 0;
+    }
+
+    .model__item--info__benefit {
+        margin-bottom: 10px;
+        font-size: 16px;
+    }
+
+    .model__item--test-drive {
+        position: relative;
+        top: auto;
+        right: auto;
+        width: auto;
+    }
 }
 
 @media (max-width: 768px) {
@@ -603,6 +672,30 @@ section {
     }
     .header__phone span {
         display: none;
+    }
+
+    .model__list {
+        grid-template-columns: 1fr;
+    }
+
+    .model__item--header {
+        --itemHeaderPadding: 15px;
+    }
+
+    .model__item--body__colors {
+        margin: 20px 0 24px;
+    }
+}
+
+@media (max-width: 586px) {
+
+    .model__item {
+        padding-inline: 15px;
+        padding-bottom: 20px;
+    }
+
+    .model__item--gifts {
+        grid-template-columns: 1fr;
     }
 }
 
